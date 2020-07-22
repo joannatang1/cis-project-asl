@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Alphabet</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="fstyle.css">
+		<script src="fjavascript.js"></script>
+	</head>
+	<header>
+		<a href="asl_home.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbq8Eu-BnVGSpVAW9WY5-V_8KW3owNp08tyV47NcjrA0gPk52"></a>
+		<a href="alphabet.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJOQEjQozY4MZbHxuXmv9R2EkgCzJ48URcKJOjb6-ZNtAIJMr"></a>
+		<a href="numbers.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShtwHcpaklJAEXxWr-abbGGFaYNx-eyk0OfySwZXUU7E0IGBc8"></a>
+		<a href="colors.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfeWJZWsWX12sL5dxSPmE8jaOyi7Uh4mgKv1-AjiROGA9_O48M"></a>
+		<a href="basic_words.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqe4PUmqR5816o67gULdda6sQjuQqmDDwyeduP2uacc2wkNqbZw"></a>
+		<a href="quiz.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7l7ZlE4-yFbwZUpqNZdS5WKrqcxKIow4XXyIhsvR2W6tbddYvg"></a>
+	</header>
+	<body>
+		<div>
+			<button type="button" onClick="quiz(alp_array, 'alp_review'), timer(alp_array, 'alp_review'), document.getElementById('alp_submit').style.display = 'block', 
+			document.getElementById('num_submit').style.display = 'none',
+			document.getElementById('color_submit').style.display = 'none',
+			document.getElementById('basic_word_submit').style.display = 'none'">Start ALPHABET quiz!</button>
+
+			<button type="button" onClick="quiz(num_array, 'num_review'), timer(num_array, 'num_review'), document.getElementById('num_submit').style.display = 'block',
+			document.getElementById('alp_submit').style.display = 'none',
+			document.getElementById('color_submit').style.display = 'none',
+			document.getElementById('basic_word_submit').style.display = 'none'">Start NUMBER quiz!</button>
+
+			<button type="button" onClick="quiz(color_array, 'color_review'), timer(color_array, 'color_review'), document.getElementById('color_submit').style.display = 'block',
+			document.getElementById('alp_submit').style.display = 'none', 
+			document.getElementById('num_submit').style.display = 'none',
+			document.getElementById('basic_word_submit').style.display = 'none'">Start COLOR quiz!</button>
+
+			<button type="button" onClick="quiz(basic_word_array, 'basic_word_review'), timer(basic_word_array, 'basic_word_review'), document.getElementById('basic_word_submit').style.display = 'block',
+			document.getElementById('alp_submit').style.display = 'none', 
+			document.getElementById('num_submit').style.display = 'none',
+			document.getElementById('color_submit').style.display = 'none'">Start BASIC WORDS quiz!</button>
+		</div>
+		<br>
+		<h3>Directions: </h3><p>Try to get as many correct answers as you can in 60 seconds.</p>
+		<h4 id="showscore">Score: 0</h4>
+		<h4 id="showtime">Time: 60</h4>
+		<img class="big" id="quiz_img" src="http://www.thebikecomesfirst.com/wp-content/uploads/2018/01/quiz_150908823.jpg">
+		<br>
+		<input type="text" id="quiz_answer" value="" size="20" maxlength="20">
+		<div class="quiz_buttons">
+			<button id="alp_submit" class="hide" type="button" onClick="check_quiz(alp_array, 'alp_review')"
+			">Submit</button>
+			<button id="num_submit" class="hide" type="button" onClick="check_quiz(num_array, 'num_review')"
+			">Submit</button>
+			<button id="color_submit" class="hide" type="button" onClick="check_quiz(color_array, 'color_review')"
+			">Submit</button>
+			<button id="basic_word_submit" class="hide" type="button" onClick="check_quiz(basic_word_array, 'basic_word_review')"
+			">Submit</button>
+		</div>
+		<p id="test">Start!</p>
+	</body>
+</html>

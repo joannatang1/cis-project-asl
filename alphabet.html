@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+		<title>Alphabet</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="fstyle.css">
+		<script src="fjavascript.js"></script>
+	</head>
+	<header>
+		<a href="asl_home.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlbq8Eu-BnVGSpVAW9WY5-V_8KW3owNp08tyV47NcjrA0gPk52"></a>
+		<a href="alphabet.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkJOQEjQozY4MZbHxuXmv9R2EkgCzJ48URcKJOjb6-ZNtAIJMr"></a>
+		<a href="numbers.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShtwHcpaklJAEXxWr-abbGGFaYNx-eyk0OfySwZXUU7E0IGBc8"></a>
+		<a href="colors.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfeWJZWsWX12sL5dxSPmE8jaOyi7Uh4mgKv1-AjiROGA9_O48M"></a>
+		<a href="basic_words.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlqe4PUmqR5816o67gULdda6sQjuQqmDDwyeduP2uacc2wkNqbZw"></a>
+		<a href="quiz.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ7l7ZlE4-yFbwZUpqNZdS5WKrqcxKIow4XXyIhsvR2W6tbddYvg"></a>
+	</header>
+	<body>
+		<h1>ABC what?</h1>
+		<img class="big" src="https://ecdn.teacherspayteachers.com/thumbitem/Sign-Language-Alphabet-2855728-1504186869/original-2855728-1.jpg">
+		<br>
+		<button type="button" onClick="review(alp_array, 'alp_review')">Mini review!</button>
+		<br>
+		<h3>Directions: </h3><p>Type in the letter that the symbol represents and click on the 'Enter' button.</p>
+		<img id="alp_review" src="https://www.reviewtrackers.com/wp-content/uploads/shutterstock_194807483.jpg">
+		<br>
+		<input type="text" id="review_answer" value="" size="5" maxlength="1">
+		<button type="button" onClick="check_review(alp_array, 'alp_review')">Enter</button>
+		<p id="test">Start!</p>
+	</body>
+</html>
