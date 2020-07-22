@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo</title>
+	</head>
+	<style>
+		body {	
+				text-align: center;
+		}
+		#task {
+			text-align: center;
+			display: block;
+			height: 500px;
+			width: 750px;
+			margin: auto;
+			border: 2px solid black;				
+		}
+		#dot {
+			padding: 100px;
+			font-size: 100px;
+		}
+		#tiger {
+			visibility: hidden;
+		}
+	</style>
+	<script> 
+		var start;
+		var end;
+		var starttime, endtime;
+		var time;
+		var timeArray = [];
+
+		function startDemo(){
+			setTimeout(show, Math.floor(Math.random() * 15000)) // within 10 seconds 
+		}
+		function startTimer(){
+			start = new Date;
+			starttime = start.getTime();
+			//document.getElementById("time").innerHTML = starttime;
+		}
+		function stopTimer(){ 
+			end = new Date;
+			endtime = end.getTime();
+			time = end - start;
+			document.getElementById("test").innerHTML = time + ' milliseconds';
+			timeArray.push(time);
+			hide();
+		}
+		function show(){
+			document.getElementById("tiger").style.visibility = 'visible';
+			startTimer();
+		}
+		function hide(){
+			document.getElementById("tiger").style.visibility = 'hidden';
+		}
+	</script>
+	<body>
+		<div id="myProgress" style="width: 100%; background-color:grey;">
+  <div id="myBar" style="width:1%; height:20px; background-color:blue"></div>
+</div>
+		<h1 id="title">hoelaaa</h1>
+		<p id="time"></p>
+		<button type="button" onclick="startDemo()">Start demo</button>
+		<button id="clickButton" type= "button" onclick="stopTimer()">Click Me!</button>
+		<div id="task" style="background-color: gray; color: green">
+			<h1 id="dot" >.</h1>
+			<img id="tiger" src="https://pngriver.com/wp-content/uploads/2017/12/download-Tiger-PNG-transparent-images-transparent-backgrounds-PNGRIVER-COM-tiger_PNG23248.png" width="50">
+
+		</div>	
+		<p id="test"></p>
+	</body>
+</html>
+
